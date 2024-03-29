@@ -7,11 +7,12 @@
   height: 100%;
 }
 body{
-  overflow: hidden;
+  overflow: auto;
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
-@apply bg-[#040711]
+  @apply bg-[#040711];
+  @apply md:overflow-hidden;
 }
 .dm-sans {
   font-family: "DM Sans", sans-serif;
