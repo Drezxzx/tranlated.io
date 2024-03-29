@@ -65,7 +65,7 @@ function App() {
           </header>
           <main>
             <form className='relative'>
-              <textarea value={response} placeholder='Selecciona el idioma al que quieres traducir' disabled className='w-full bg-transparent text-[#F9FAFB] font-semibold focus:outline-none max-h-36 resize-none' rows={7}></textarea>
+              <textarea value={response} placeholder='Selecciona el idioma al que quieres traducir' disabled className='w-full bg-transparent  text-[#F9FAFB] font-semibold focus:outline-none max-h-36 resize-none' rows={7}></textarea>
               <div className='flex justify-between items-center w-full'>
               <button onClick={handleCopyResponse} className={`px-2 py-2 border-4 border-[#363f4dce] hover:border-[#4D5562] hover:scale-105 transition rounded-xl ${copyClicked ? ' hover:border-[#29cd3c] ' : ''}`}><img src={Copy} /></button>
               </div>
