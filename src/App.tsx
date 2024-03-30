@@ -5,7 +5,6 @@ import {IconChevronUp, IconChevronDown} from '@tabler/icons-react'
 import change from './assets/Horizontal_top_left_main.svg'
 import logo from './assets/logo.svg'
 import React, { useState, useRef, useEffect } from 'react'
-import down from './assets/Expand_down.svg'
 import { LENGUAJES } from './service/lenguaje.ts'
 import { useHandles } from './service/handles.ts'
 
@@ -31,6 +30,7 @@ function App() {
     console.log(selectedLanguajeSent);
     
     setLanguajeSetn(selectedLanguajeSent);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [languajeText]);
   
   useEffect(() => {
@@ -39,6 +39,7 @@ function App() {
     console.log(selectedLanguajeRes);
     
     setNewLanguaje(selectedLanguajeRes);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [languajeText2]);
   
  
