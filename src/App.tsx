@@ -1,11 +1,10 @@
 import background from './assets/hero_img.jpg'
 import Copy from './assets/Copy.svg'
 import Alpha from './assets/Sort_alfa.svg'
-import {IconChevronUp} from '@tabler/icons-react'
+import {IconChevronUp, IconChevronDown} from '@tabler/icons-react'
 import change from './assets/Horizontal_top_left_main.svg'
 import logo from './assets/logo.svg'
 import React, { useState, useRef, useEffect } from 'react'
-import xlogo from './assets/x.svg'
 import down from './assets/Expand_down.svg'
 import { LENGUAJES } from './service/lenguaje.ts'
 import { useHandles } from './service/handles.ts'
@@ -85,15 +84,15 @@ function App() {
 
   const Button = () =>{
     if (hidden) {
-      return (<button onClick={handleClose} className=' hover:scale-110  transition z-50  '><img className='hover:scale-125 size-6 cursor-pointer' onClick={handleClose} src={down}/></button>)
+      return (<button onClick={handleClose} className=' hover:scale-110  transition z-50  '><IconChevronDown></IconChevronDown></button>)
     }
-    return (<button onClick={handleClose} className=' hover:scale-110 transition z-50  '><img src={xlogo} /></button>)
+    return (<button onClick={handleClose} className=' hover:scale-110 transition z-50  '><IconChevronUp></IconChevronUp></button>)
   }
   const Button2 = () =>{
     if (hidden2) {
-      return (<button onClick={handleClose2} className=' hover:scale-110  transition z-50  '><img className='hover:scale-125 size-6 cursor-pointer' onClick={handleClose2} src={down}/></button>)
+      return (<button onClick={handleClose2} className=' hover:scale-110  transition z-50  '><IconChevronDown></IconChevronDown></button>)
     }
-    return (<button onClick={handleClose2} className=' hover:scale-110 transition z-50  '><img src={xlogo} /></button>)
+    return (<button onClick={handleClose2} className=' hover:scale-110 transition z-50  '><IconChevronUp></IconChevronUp></button>)
   }
 
   return (
