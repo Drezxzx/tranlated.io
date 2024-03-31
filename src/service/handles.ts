@@ -57,12 +57,14 @@ export function useHandles() {
         const data = await translate({text, code1 : first, code2 : second})
         if (data) {
           setResponse(data)
-        }
+        }else{
           setResponse("Traducionendo...")
+        }
         
         
       }
-      const handleChange =   () => {
+      const handleChange =   (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault()
         const firstlan = first 
         const secondlan = second
         const lasttext = text
